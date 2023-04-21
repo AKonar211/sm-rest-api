@@ -23,9 +23,9 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-// app.get("/",(req,res)=>{
-//     res.send("Welcome to homepage")
-// })
+app.get("/",(req,res)=>{
+    res.send("API is running");
+});
 
 // app.get("/users",(req,res)=>{
 //     res.send("Welcome to User page")
