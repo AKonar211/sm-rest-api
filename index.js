@@ -31,6 +31,7 @@ app.use("/api/posts", postRoute);
 //     res.send("Welcome to User page")
 // })
 
-app.listen(8800,()=>{
-    console.log("Backend server running");
+const PORT = process.env.PORT;
+app.listen(PORT,()=>{
+    console.log("Backend server running at port 5000");
 });
