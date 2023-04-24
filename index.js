@@ -22,9 +22,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use("/routes/users", userRoute);
-app.use("/routes/auth", authRoute);
-app.use("/routes/posts", postRoute);
+app.use("/users", userRoute);
+app.use("/auth", authRoute);
+app.use("/posts", postRoute);
 
 app.get("/",(req,res)=>{
     res.send("API is running");
