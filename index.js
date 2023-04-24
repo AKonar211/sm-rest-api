@@ -8,6 +8,9 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 
+const router = express.Router();
+const path = require("path");
+
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL,()=>{
@@ -19,9 +22,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use("/api/users", userRoute);
-app.use("/api/auth", authRoute);
-app.use("/api/posts", postRoute);
+app.use("/routes/users", userRoute);
+app.use("/routes/auth", authRoute);
+app.use("/routes/posts", postRoute);
 
 app.get("/",(req,res)=>{
     res.send("API is running");
